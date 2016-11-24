@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Facts Web</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/page.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="js/page-index.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+    <!--[if lt IE 9]>
+
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">Food Facts Web Demo</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">成分分析</a></li>
+            <li><a href="create.html">食谱创建</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+<div class="container">
+<div class="page-header">
+     <h3>食品成分搜索、分析</h3>
+</div>
+
+
+<div class="row">
+          <div class="col-md-3">
+            <br>
+            <div class="input-group">
+                <input type="text" class="form-control"><span class="input-group-addon btn btn-success">搜索</span>
+            </div>
+            <br>
+            <a href="#" class="list-group-item">搜索得到的结果 1</a>
+            <a href="#" class="list-group-item">搜索得到的结果 2</a>
+            <a href="#" class="list-group-item active">搜索得到的结果 3</a>
+            <a href="#" class="list-group-item">搜索得到的结果 4 </a>
+            <a href="#" class="list-group-item">搜索得到的结果 5</a>
+          </div>
+          <div class="col-md-4">
+          <table class="table">
+           <thead>
+              <tr>
+                 <th>基本信息</th>
+                 <th>结果</th>
+              </tr>
+           </thead>
+           <tbody>
+              <tr>
+                 <td>某个属性</td>
+                 <td class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+              </tr>
+              <tr>
+                 <td>某个属性</td>
+                 <td class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+              </tr>
+           </tbody>
+        </table>
+        <table class="table">
+           <thead>
+              <tr>
+                 <th>信息分类2</th>
+                 <th>结果</th>
+              </tr>
+           </thead>
+           <tbody>
+              <tr>
+                 <td>某个属性</td>
+                 <td  class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+              </tr>
+              <tr>
+                 <td>某个属性</td>
+                 <td class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+              </tr>
+           </tbody>
+        </table>
+        <table class="table">
+           <thead>
+              <tr>
+                 <th>信息分类3</th>
+                 <th>结果</th>
+              </tr>
+           </thead>
+           <tbody>
+              <tr>
+                 <td>某个属性</td>
+                 <td  class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+              </tr>
+              <tr>
+                 <td>某个属性</td>
+                 <td  class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+              </tr>
+              <tr>
+                 <td>某个属性</td>
+                 <td class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+              </tr>
+              <tr>
+                 <td>某个属性</td>
+                 <td class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+              </tr>
+              <tr>
+                 <td>某个属性</td>
+                 <td  class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+              </tr>
+           </tbody>
+        </table>
+          </div>
+          <div class="col-md-5">
+                <div id="pie-container" style="min-width:600px;height:500px"></div>
+          </div>
+</div>
+
+
+
+
+</div>
+</body>
+</html>
