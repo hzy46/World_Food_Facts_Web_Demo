@@ -57,7 +57,7 @@ $(function () {
         if ($('#input-fat').val()) url += "fat_lt=" + $('#input-fat').val() + "&";
         if ($('#input-sugar').val()) url += "sugar_lt=" + $('#input-sugar').val() + "&";
         if ($('#input-salt').val()) url += "salt_lt=" + $('#input-salt').val() + "&";
-        if ($('#input-protein').val()) url += "sugar_lt=" + $('#input-protein').val() + "&";
+        if ($('#input-protein').val()) url += "proteins_lt=" + $('#input-protein').val() + "&";
         if ($('#input-country').val()) url += "country=" + $('#input-country').val() + "&";
         if(url[url.length-1] == '&') url = url.substring(0, url.length-1);
         console.log(url);
