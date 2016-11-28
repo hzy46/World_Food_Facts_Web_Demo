@@ -52,7 +52,6 @@ $(function () {
         console.log(url);
         $.get(url, function(result){
             result = eval("(" + result + ")");
-            console.log(result);
             var data = result.data;
             var question_mark = '<span class="glyphicon glyphicon-question-sign text-primary"></span>';
             var dict={
@@ -86,7 +85,6 @@ $(function () {
             $('.list-group-item').removeClass('active');
             clicked_item.addClass('active');
 
-
         });
 
     })
@@ -108,7 +106,7 @@ $(function () {
                      $('<a/>', {
                             'class': 'list-group-item search-result-item',
                             'href': '#',
-                            'text': json_result.data[i].name,
+                            'html': json_result.data[i].name,
                             'data-id': json_result.data[i].id
                         }).appendTo($('#search-result'));
                 }

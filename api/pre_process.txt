@@ -1,0 +1,69 @@
+去掉没有国家的
+db.products.remove({"countries":null})
+
+
+类型矫正：
+db.products.find({}).forEach(function(doc){
+        var newVal = parseFloat(doc.nutriments.energy);
+        if(newVal==NaN) newVal=0;
+	doc.nutriments.energy=newVal;
+        db.products.save(doc);
+    });
+
+db.products.find({}).forEach(function(doc){
+        var newVal = parseFloat(doc.nutriments.salt);
+        if(newVal==NaN) newVal=0;
+	doc.nutriments.salt=newVal;
+        db.products.save(doc);
+    });
+
+db.products.find({}).forEach(function(doc){
+        var newVal = parseFloat(doc.nutriments.sugars);
+        if(newVal==NaN) newVal=0;
+	doc.nutriments.sugars=newVal;
+        db.products.save(doc);
+    });
+
+db.products.find({}).forEach(function(doc){
+        var newVal = parseFloat(doc.nutriments.fat);
+        if(newVal==NaN) newVal=0;
+	doc.nutriments.fat=newVal;
+        db.products.save(doc);
+    });
+
+db.products.find({}).forEach(function(doc){
+        var newVal = parseFloat(doc.nutriments.carbohyrates);
+        if(newVal==NaN) newVal=0;
+	doc.nutriments.carbohyrates=newVal;
+        db.products.save(doc);
+    });
+
+db.products.find({}).forEach(function(doc){
+        var newVal = parseFloat(doc.nutriments.proteins);
+        if(newVal==NaN) newVal=0;
+	doc.nutriments.proteins=newVal;
+        db.products.save(doc);
+    });
+
+
+去掉没名字的
+> db.products.remove({"product_name":null})
+> db.products.remove({"product_name":""})
+
+
+加上索引：
+
+> db.products.createIndex({"countries": 1})
+> db.products.createIndex({"nutriments.energy": 1})
+> db.products.createIndex({"nutriments.fat": 1})
+> db.products.createIndex({"nutriments.sugars": 1})
+> db.products.createIndex({"nutriments.salt": 1})
+> db.products.createIndex({"nutriments.carbohyrates": 1})
+> db.products.createIndex({"nutriments.proteins": 1})
+> db.products.createIndex({"code": 1})
+> db.products.createIndex({"product_name": 1})
+
+
+
+
+
