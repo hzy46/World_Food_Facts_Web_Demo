@@ -66,7 +66,7 @@ GET http://<ip>:<port>/id/食物的id
 ### 3. 菜谱生成
 
 ```
-GET http://<ip>:<port>/menu?energy_gt=200&sugar_lt=20&fat_lt=30&salt_lt=1&carbohydrates_lt=20&proteins_lt=1
+GET http://<ip>:<port>/menu?energy_gt=200&sugar_lt=20&fat_lt=30&salt_lt=1&proteins_lt=1
 ```
 
 约定
@@ -86,3 +86,8 @@ GET http://<ip>:<port>/menu?energy_gt=200&sugar_lt=20&fat_lt=30&salt_lt=1&carboh
 ```
 
 energy表示七天，每天的energy总和。方便网页做一个图表。
+
+
+
+address:
+http://10.138.33.44:5000/

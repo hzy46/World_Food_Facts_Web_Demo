@@ -8,6 +8,7 @@
     <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="js/api.js"></script>
     <script type="text/javascript" src="js/page-index.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 
@@ -49,14 +50,16 @@
           <div class="col-md-3">
             <br>
             <div class="input-group">
-                <input type="text" class="form-control"><span class="input-group-addon btn btn-success">搜索</span>
+                <input type="text" class="form-control" id="search-text"><span class="input-group-addon btn btn-success" id='search'>搜索</span>
             </div>
             <br>
-            <a href="#" class="list-group-item">搜索得到的结果 1</a>
-            <a href="#" class="list-group-item">搜索得到的结果 2</a>
-            <a href="#" class="list-group-item active">搜索得到的结果 3</a>
-            <a href="#" class="list-group-item">搜索得到的结果 4 </a>
-            <a href="#" class="list-group-item">搜索得到的结果 5</a>
+            <div id="search-result">
+              <a href="#" class="list-group-item search-result-item active">搜索得到的结果 1</a>
+              <a href="#" class="list-group-item search-result-item">搜索得到的结果 2</a>
+              <a href="#" class="list-group-item search-result-item">搜索得到的结果 3</a>
+              <a href="#" class="list-group-item search-result-item">搜索得到的结果 4 </a>
+              <a href="#" class="list-group-item search-result-item">搜索得到的结果 5</a>
+            </div>
           </div>
           <div class="col-md-4">
           <table class="table">
@@ -68,60 +71,56 @@
            </thead>
            <tbody>
               <tr>
-                 <td>某个属性</td>
-                 <td class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+                 <td>ID</td>
+                 <td class="detect-result" id='detect-id'><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
               </tr>
               <tr>
-                 <td>某个属性</td>
-                 <td class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+                 <td>品牌</td>
+                 <td class="detect-result" id="detect-brands"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+              </tr>
+              <tr>
+                 <td>国家</td>
+                 <td class="detect-result" id="detect-country"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+              </tr>
+<!--               <tr>
+                 <td>种类</td>
+                 <td class="detect-result" id="detect-category"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+              </tr> --> 
+              <tr>
+                 <td>规格</td>
+                 <td class="detect-result" id="detect-quantity"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
               </tr>
            </tbody>
-        </table>
-        <table class="table">
            <thead>
               <tr>
-                 <th>信息分类2</th>
+                 <th>每100克营养成分</th>
                  <th>结果</th>
               </tr>
            </thead>
            <tbody>
               <tr>
-                 <td>某个属性</td>
-                 <td  class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+                 <td>能量</td>
+                 <td  class="detect-result" id="detect-energy"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
               </tr>
               <tr>
-                 <td>某个属性</td>
-                 <td class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
-              </tr>
-           </tbody>
-        </table>
-        <table class="table">
-           <thead>
-              <tr>
-                 <th>信息分类3</th>
-                 <th>结果</th>
-              </tr>
-           </thead>
-           <tbody>
-              <tr>
-                 <td>某个属性</td>
-                 <td  class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+                 <td>脂肪</td>
+                 <td  class="detect-result" id="detect-fat"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
               </tr>
               <tr>
-                 <td>某个属性</td>
-                 <td  class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+                 <td>糖类</td>
+                 <td class="detect-result" id="detect-sugar"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
               </tr>
               <tr>
-                 <td>某个属性</td>
-                 <td class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+                 <td>碳水化合物</td>
+                 <td class="detect-result"  id="detect-carbohydrates"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
               </tr>
               <tr>
-                 <td>某个属性</td>
-                 <td class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+                 <td>蛋白质</td>
+                 <td  class="detect-result"  id="detect-protein"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
               </tr>
               <tr>
-                 <td>某个属性</td>
-                 <td  class="detect-result"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
+                 <td>盐分</td>
+                 <td  class="detect-result"  id="detect-salt"><span class="glyphicon glyphicon-question-sign text-primary"></span></td>
               </tr>
            </tbody>
         </table>
